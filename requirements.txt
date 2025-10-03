@@ -1,10 +1,23 @@
+# Core framework
 langchain
-wikipedia
+
+# Community integrations (tools, loaders, vector stores)
 langchain-community
+
+# Model adapters
 langchain-openai
 langchain-anthropic
-python-dotenv
-pydantic 
-langchain-google-genai
-langchain-deepseek 
-duckduckgo-search
+langchain-google-genai     # LangChain adapter for Google Gemini
+langchain-deepseek
+
+# Provider SDKs required by adapters
+google-generativeai        # Official Gemini SDK required by langchain-google-genai
+
+# Tools used by your agent
+duckduckgo-search          # DuckDuckGo search wrapper
+ddgs                       # Backend required by DuckDuckGoSearchRun
+wikipedia                  # Wikipedia client used by WikipediaAPIWrapper
+
+# Utilities
+python-dotenv              # Load API keys from .env
+pydantic                   # Typed schemas and validation
